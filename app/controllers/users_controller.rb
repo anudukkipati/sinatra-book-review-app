@@ -32,7 +32,7 @@ class UsersController < ApplicationController
         flash[:message] = "You have sucessfully created an account, #{@user.username}!"
         redirect '/book_reviews'
       else
-         flash[:error] = "Account creation failure: #{@user.errors.full_messages.to_sentence}"
+         flash[:errors] = "Account creation failure: #{@user.errors.full_messages.to_sentence}"
           redirect '/signup'
       end
      end
