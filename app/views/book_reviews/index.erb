@@ -1,0 +1,18 @@
+<h3>Book Reviews</h3>
+
+<% @book_reviews.each do |book_review| %>
+    <div>
+      <h4><a href="/book_reviews/<%=book_review.id %>"><%= book_review.title %></a></h4>
+
+  
+
+      <h4>By <%= book_review.user.username %> </h4>
+      <h5><%= book_review.created_at_stamp %></h5>
+    </div>
+<% end %>
+
+<br><br>
+<br><br>
+<p><a href="/book_reviews/new">Click here to add a New Book Review</a>
+<br>
+<a href="/logout">Log Out</a></p>

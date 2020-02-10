@@ -1,0 +1,20 @@
+<h3><%= @book_review.title %></h3>
+
+<p style="float: left;><a href="<%= @book_review.image %>"><img src="<%= @book_review.image %>" alt ="book_image" width="120" height="160"></a></p>
+<p><%= @book_review.content %></p>
+
+<p>Reviewed by: <%= @book_review.user.username %></p>
+
+<p>Created On: <%= @book_review.created_at_stamp %></p>
+<br><br>
+<% if @book_review.user == current_user %>
+   <a href="/book_reviews/<%= @book_review.id %>/edit">Edit Book Review</a>
+   <br><br>
+   <form action="/book_reviews/<%= @book_review.id %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="" value="Delete Book Review">
+  </form>
+<% end %>
+<br><br>
+<p><a href="/book_reviews">Go to Book Reviews Home Page</a></p>
+<p><a href="/logout">LOG OUT</a></p>
