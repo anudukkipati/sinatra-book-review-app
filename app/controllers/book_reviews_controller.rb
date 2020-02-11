@@ -1,7 +1,7 @@
 class BookReviewsController < ApplicationController
 
     get '/book_reviews' do
-       # redirect_if_not_logged_in
+        redirect_if_not_logged_in
         @book_reviews = BookReview.all
         erb :'/book_reviews/index'
     end
