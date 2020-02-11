@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       @user = User.new(username: params[:username], email: params[:email], password: params[:password])
       if @user.save
         session[:user_id] = @user_id
-        flash[:message] = "You have sucessfully created an account, #{@user.username}!"
+        flash[:message] = "You have sucessfully created an account, #{@user.username}!, Please Log In to continue."
         redirect '/login'
       else
          flash[:errors] = "Account creation failure: #{@user.errors.full_messages.to_sentence}"
