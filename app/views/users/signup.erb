@@ -1,15 +1,24 @@
-<h3>Fill the form to Sign Up</h3>
-<br>
-<form action="/signup" method="POST">
-<label for="name">Name: </label>
-<input type="text" name="username" placeholder="Name">
 
-<label for="email">Email: </label>
-<input type="text" name="email" placeholder="Email">
+<div class ="row" >
+  
+  <div id="signup">
+  <h3 style="text-align:center;">Fill the form to Sign Up</h3>
+  <form action="/signup" method="POST">
+    <div class="form-group">
+     <label for="name">Name: </label>
+     <input type="text" class="form-control" name="username" placeholder="Name" id="name">
+    
+   </div>
+   <div class="form-group">
+     <label for="email">Email: </label>
+     <input type="text" class="form-control" name="email" placeholder="Email" id="email">
+   </div>
+   <div class="form-group">
+     <label for="pass">Password: </label>
+     <input type="password" class="form-control" name="password" placeholder="Password" id="pass">
 
-<label for="pass">Password: </label>
-<input type="password" name="password" placeholder="Password" id="pass">
-
-<input type="submit" value="Sign Up" id="submit">
-
-</form>
+   </div>
+   <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+ </div>
+</div>

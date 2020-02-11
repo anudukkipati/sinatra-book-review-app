@@ -1,0 +1,98 @@
+html{
+    box-sizing: border-box;
+   
+}
+*, *::before, *::after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing:border-box;
+}
+*{
+margin: 0;
+padding: 0;
+}
+
+body{
+    margin: 0;/* margin: 0 & padding: 0 resets all the margins and paddings and moves the content to the left edge of the page*/
+    padding-top: 0;
+    font-size: 100%;
+   /* color:white;*/
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.4em;
+    /*width: 100%;*/
+   /* background-color: #2f4f4f; */
+  
+}
+
+header{
+    background-color: #a6a6a6;
+    width: 100%;
+}
+.navbar ul li {
+    font-weight: bold;
+    font-size: 1em;
+}
+nav{
+    background-color: #ff9900;
+   
+ 
+}
+#welcome{
+    padding-top: 30px;
+   
+   /* background-color: #fff5cc; #ffe0b3;*/
+}
+
+#img_container {
+    background-image: url(https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 );
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    max-width: 100%;
+    margin-top: 0;
+}
+#img_container h1{
+    color: #ff9900; /*#8bc34a;*/
+    text-align: center;
+    padding-top: 50px;
+    font-size: 60px;
+}
+.form-container{
+    padding-top: 80px;
+    width:30%;
+    margin: auto;
+}
+#signup{
+    padding-top: 80px;
+    width:30%;
+    margin: auto;
+}
+ h3{
+
+   padding-top: 50px;
+}
+.branding{
+    padding-top: 200px;
+}
+.links{
+    list-style-type: none;
+}
+.left{
+    float: left;
+    margin-right: 10px;
+}
+.content{
+    padding: 0 0 20px 0;
+}
+
+.reviews{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.review-link{
+    padding-top: 5px;
+}
+.title{
+    text-decoration: underline;
+}

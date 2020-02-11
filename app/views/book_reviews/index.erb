@@ -1,7 +1,7 @@
-<h3>Book Reviews</h3>
-
+<h3 class="title">Book Reviews</h3>
+<div >
 <% @book_reviews.each do |book_review| %>
-    <div>
+    <div class="reviews">
       <h4><a href="/book_reviews/<%=book_review.id %>"><%= book_review.title %></a></h4>
 
   
@@ -10,9 +10,6 @@
       <h5><%= book_review.created_at_stamp %></h5>
     </div>
 <% end %>
+</div>
 
-<br><br>
-<br><br>
-<p><a href="/book_reviews/new">Click here to add a New Book Review</a>
-<br>
-<a href="/logout">Log Out</a></p>
+<p class="review-link"><a href="/book_reviews/new"><button type="button" class="btn btn-info">Click here to add a New Book Review</button></a>
