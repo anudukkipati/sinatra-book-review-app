@@ -2,13 +2,6 @@
 
 A simple app that allows users to signup, login, add book reviews and a user can edit and delete their own book reviews.
 
-## Getting Started
-
-
-1. To run this app, clone the repository and run bundle install.
-2. Run rake db:migrate
-3.Then run shotgun to start the server and then the app can be viewed in the browser at localhost:9393.
-
 
 ### Installing
  To run this app, clone the repository and run ```bundle install```.
