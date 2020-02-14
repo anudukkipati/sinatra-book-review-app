@@ -1,17 +1,24 @@
+
+<h2>Edit Book Review</h2>
 <form action="/book_reviews/<%= @book_review.id %>" method="POST">
    <input type="hidden" name="_method" value="patch">
+   <div class="form-group">
+     <label for="title">Title:</label>
+     <input type="text" class="form-control" name="title" id="title" value="<%=@book_review.title %>">
+  </div>
+  <div class="form-group">
+    <label for="image">Image:</label>
+    <input type="text" class="form-control" name="image" id="image" value="<%=@book_review.image %>">
+  </div>
+  <div class="form-group">
+     <label for="content">Content: </label><br>
+     <textarea name="content" class="form-control" id="content" rows="5" cols="33"><%= @book_review.content %></textarea>
+  </div>
+  
 
-   <label for="title">Title:</label>
-  <input type="text" name="title" id="title" value="<%=@book_review.title %>">
-  <br><br>
-
-  <label for="image">Image:</label>
-  <input type="text" name="image" id="image" value="<%=@book_review.image %>">
-   <br><br>
-
-   <label for="content">Content: </label><br>
-  <textarea name="content" id="content" rows="5" cols="33"><%= @book_review.content %></textarea>
-
-  <input type="submit" value="Edit Book Review" id="submit">
+  <button type="submit" class="btn btn-primary">Edit Book Review</button>
 </form>
-<p><a href="/book_reviews">Go to Book Reviews Home Page</a></p>
+<br><br>
+<div>
+<p><a href="/book_reviews"><button type="submit" class="btn btn-success">Go to Book Reviews Home Page</button></a></p>
+</div>
