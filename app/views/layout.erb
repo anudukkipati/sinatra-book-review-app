@@ -44,6 +44,9 @@
                 <a class="nav-link" href="#">Signed In As <%= @current_user.username %></a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="/users/<%= @current_user.id %>"><%= @current_user.username %>'s Page</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="/book_reviews/new">Add a Book Review</a>
               </li>
 

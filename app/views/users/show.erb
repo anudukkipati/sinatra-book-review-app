@@ -1,0 +1,20 @@
+<h2>Welcome, <%= @user.username %></h2>
+<br><br>
+<div>
+<% @user.book_reviews.map do |book| %>
+     
+     <div>
+        <h4> <%= book.title %></h4>
+       
+        <p class="left"><a href="<%= book.image %>"><img src="<%= book.image %>" alt ="book_image" width="120" height="160"></a></p>
+
+        <p class="content"><%= book.content %></p>
+
+        <p>Created On: <%= book.created_at_stamp %></p>
+    </div>
+   <br><br>
+   <br><br>
+<% end %>
+</div>
+<br><br>
+<p><a href="/book_reviews"><button type="submit" class="btn btn-success">Go to Book Reviews Home Page</button></a></p>
