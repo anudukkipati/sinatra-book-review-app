@@ -26,7 +26,8 @@ class UsersController < ApplicationController
 
      post '/signup' do
       
-      @user = User.new(username: params[:username], email: params[:email], password: params[:password])
+      @user = User.new(username: params[:username], email: params[:email],  password: params[:password])  #password: validating_user(params)
+      
       if @user.save
         session[:user_id] = @user.id
         flash[:message] = "You have sucessfully created an account, #{@user.username}!, Please Log In to continue."
@@ -48,4 +49,15 @@ class UsersController < ApplicationController
         session.clear
         redirect '/'
       end
+
+      private
+
+# def validating_user(params)
+#   if params[:password] != "password"
+#      params[:password]
+#   else
+#     nil
+#   end
+#  end
 end
+

@@ -12,6 +12,8 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-flash'
+gem "rack", ">= 2.2.3"
+gem "nokogiri", ">= 1.10.8"
 
 group :test do
   gem 'rspec'
