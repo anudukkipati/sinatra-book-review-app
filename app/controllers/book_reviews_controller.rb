@@ -1,16 +1,18 @@
 class BookReviewsController < ApplicationController
-
+    #index action
     get '/book_reviews' do
         redirect_if_not_logged_in
         @book_reviews = BookReview.all
         erb :'/book_reviews/index'
     end
 
+    #new action
     get '/book_reviews/new' do 
         redirect_if_not_logged_in
           erb :'/book_reviews/new'    
     end
-
+    
+    #create action
     post '/book_reviews' do
         redirect_if_not_logged_in
            if params[:title] && params[:image] && params[:content] != ""
@@ -22,13 +24,14 @@ class BookReviewsController < ApplicationController
               redirect '/book_reviews/new'
            end
      end
-
+ 
+   #show action
      get '/book_reviews/:id' do
         @book_review = BookReview.find_by(id: params[:id])
         erb :'/book_reviews/show'
      end
      
-
+    #edit action
      get '/book_reviews/:id/edit' do 
         redirect_if_not_logged_in
         @book_review = BookReview.find_by(id: params[:id])
@@ -40,6 +43,7 @@ class BookReviewsController < ApplicationController
         
      end
 
+     #update action
      patch '/book_reviews/:id' do 
        redirect_if_not_logged_in
        @book_review = BookReview.find_by(id: params[:id])
@@ -51,6 +55,7 @@ class BookReviewsController < ApplicationController
        end
      end
 
+     #delete action
      delete '/book_reviews/:id' do 
         @book_review = BookReview.find_by(id: params[:id])
         if @book_review.user == current_user

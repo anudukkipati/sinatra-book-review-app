@@ -2,7 +2,8 @@
 
 A simple app that allows users to signup, login, add book reviews and a user can edit and delete their own book reviews.
 
-
+## Link to Demo
+Click here to see the demo: https://vimeo.com/439455823
 ### Installing
  To run this app, clone the repository and run ```bundle install```.
  Run rake ```db:migrate```
